@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>loca storage</h1>
+    <Label>digite seu nome:</Label>
+    <input type="text" id="nome">
+    <button onclick="salvarNome()">salvar Nome</button>
+    <div> 
+
+        
+        <p id="mensagem">
+            
+            
+        </p>
+    </div>
+    
+    <script>
+        function salvarNome() {
+            let nome = document.getElementById('nome').value
+            localStorage.setItem('nomeUsuario',nome);
+            exibirMsg('nome salvo!')
+        }
+        function exibirMsg(mensagem) {
+            let pMSG = document.getElementById("mensagem")
+            pMSG.textContent = mensagem
+        }
+    </script>
+</body>
+</html>
